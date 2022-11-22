@@ -1,1 +1,68 @@
-<meta http-equiv="Refresh" content="0; url='https://creepergamergithub.github.io/links'"/>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Unblocked Game Launcher</title>
+	<link rel="manifest" href="https://progressier.com/client/progressier.json?id=eIBjhvdcUm2OnVKIxyzn"><script defer src="https://progressier.com/client/script.js?id=eIBjhvdcUm2OnVKIxyzn"></script>
+</head>
+<body>
+	<h1>Unblocked Game Launcher</h1>
+	<p>Beta 1.1.0 Note: is a site is white, the site might not embed, the site could be down/deleted or the site is blocked and the block site is non-embeddable.</p>
+	<button onclick = openGame("https://yohoho.io")>Yohoho</button>
+	<button onclick = openGame("https://2048.io")>2048</button>
+	<button onclick = openGame("https://embedded.cryptogmail.com")>Cryptogmail</button>
+	<button onclick = openGame("https://windows93.net")>Win93</button>
+	<button onclick = openGame("https://paper-io.com")>Paper.io</button>
+	<button onclick = openGame("https://htmltetris.com")>Tetris</button>
+	<button onclick = openGame("https://addictinggames.com")>Addicting Games</button>
+	<button onclick = openGame("https://abnumality.github.io/cdn/slope/index.html")>Slope</button>
+	<button onclick = openGame("https://flappybird.io")>Flappy Bird</button>
+	<button onclick = openGame("https://www.youtube-nocookie.com/embed/1fueZCTYkpA")>Lofi Music</button>
+	<button onclick = openGame("https://supermarioemulator.com/game.php")>SMB1</button>
+	<button onclick = openGame("https://webosu.online")>WebOsu!</button>
+	<button onclick = openGame("https://tsunamitest.herokuapp.com/corrosion/hvtrs8%2F-fwnjtol7gcmgs%2Ccmm-algpy%60ipdq%2Fknfez.jtol/")>Angry Birds</button>
+	<button onclick = openGame("https://holy-unblocker--jonasflynn.repl.co/")>H</button>
+	<button onclick = openGame("https://photopea.com")>Photopea</button>
+	<button onclick = openGame("https://gamaverse.com")>Gamaverse</button>
+	<button onclick = openGame("https://archive.org")>Archive.org</button>
+	<button onclick = openGame("https://unblockedgames666.com")>Unblocked Games 666</button>
+	<button onclick = openGame("https://cdn.i-ready.com/instruction/game-catstacker/1.6.x/2/")>Cat Stacker</button>
+	<button onclick = openGame("https://cdn.i-ready.com/instruction/reward-games/v1.3.x/2/game-lanerunner/")>Galaxy Sprint</button>
+	<button onclick = openGame("https://cdn.i-ready.com/instruction/game-hpr/1.4.x/2/")>Path Spinners</button>
+	<button onclick = openGame("https://cdn.i-ready.com/instruction/reward-games/v1.3.x/2/game-bubbles/")>Wizard Pinball</button>
+	<button onclick = openGame("https://cdn.i-ready.com/instruction/reward-games/v1.3.x/2/game-minedigger/")>Dig Site</button>
+	<button onclick = openGame("https://cdn.i-ready.com/instruction/game-begooped/1.3.x/2/")>Begooped</button>
+	<button onclick = openGame("https://reactle.vercel.app/")>Wordle</button>
+	<button onclick = openGame("https://hextris.com/")>Hextris</button>
+	<button onclick = openGame("https://3kh0.github.io/projects.html")>Bunch of games</button>
+	<button onclick = openGame("http://pacman.platzh1rsch.ch/")>Pacman</button>
+	<button onclick = openGame("https://mk.mgechev.com/")>Mortal Kombat In JS</button>
+	<button onclick = openGame("https://www.fciv.net/")>Freeciv</button>
+	<button onclick = openGame("https://browserquest.io/")>Browser Quest</button>
+	<button onclick = openGame("https://codeincomplete.com/games/racer/")>JS Racer</button>
+	<button onclick = openGame("https://wwwtyro.github.io/Astray/")>Astray(maze)</button>
+	<br><br>
+	<button onclick = openGame("https://creepergamer.w3spaces.com/extras/extras.html")>Extras</button>
+	</br></br>
+	<br><br>
+<a href="offline.html">Click here if you have the downloaded version of the game launcher.</a>
+	</br></br>
+      	<input id = "customInput" placeholder = "https://2048.io" value = "https://" />
+        <button onclick = openCustomGame()>Go</button>
+	<script>
+		function openGame(input) {
+			var win = window.open()
+			var url = input
+			var iframe = win.document.createElement('iframe')
+			iframe.style.width = "100%";
+			iframe.style.height = "100%";
+			iframe.style.border = "none";
+			iframe.src = url
+			win.document.body.appendChild(iframe)
+		}
+            	function openCustomGame() {
+              		var customURL = document.getElementById("customInput").value;
+                	openGame(customURL)
+            }
+	</script>
+</body>
+</html>
