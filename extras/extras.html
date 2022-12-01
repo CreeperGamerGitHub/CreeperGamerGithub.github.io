@@ -1,0 +1,19 @@
+<h1>Extras</h1>
+<button onclick = openGame("https://creepergamergithub.github.io/extras/about.html")>About</button>
+<button onclick = openGame("https://github.com/CreeperGamerGithub")>Github</button>
+<button onclick = openGame("https://creepergamergithub.github.io/extras/ulog.html")>Update Changelog</button>
+<button onclick = openGame("https://creepergamergithub.github.io/extras/cat.html")>KITTY!</button>
+<script>
+		function openGame(input) {
+			var win = window.open()
+			var url = input
+			var iframe = win.document.createElement('iframe')
+			iframe.style.width = "100%";
+			iframe.style.height = "100%";
+			iframe.style.border = "none";
+			iframe.src = url
+			win.document.body.appendChild(iframe)
+		}
+	</script>
+</body>
+</html>
