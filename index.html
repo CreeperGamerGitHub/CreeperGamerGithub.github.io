@@ -5,58 +5,7 @@
 	<link rel="manifest" href="https://progressier.com/client/progressier.json?id=eIBjhvdcUm2OnVKIxyzn"><script defer src="https://progressier.com/client/script.js?id=eIBjhvdcUm2OnVKIxyzn"></script>
 </head>
 <body>
-<div class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="GRXVpPW" data-user="CreeperGamerGitHub"  data-prefill='{"tags":[],"scripts":[],"stylesheets":[]}'>
-  <pre data-lang="html">&lt;h1 data-value="Unblocked Game Launcher">Unblocked Game Launcher&lt;/h1></pre>
-  <pre data-lang="css">body {
-  display: grid;
-  place-items: center;
-  height: 100vh;
-  background-color: black;
-  margin: 0rem;
-  overflow: hidden;
-}
-
-h1 {
-  font-family: 'Space Mono', monospace;
-  font-size: clamp(3rem, 10vw, 10rem);
-  color: white;
-  padding: 0rem clamp(1rem, 2vw, 3rem);
-  border-radius: clamp(0.4rem, 0.75vw, 1rem);
-}
-
-h1:hover {
-  background-color: white;
-  color: black;
-}</pre>
-  <pre data-lang="js">const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
-let interval = null;
-
-document.querySelector("h1").onmouseover = event => {  
-  let iteration = 0;
-  
-  clearInterval(interval);
-  
-  interval = setInterval(() => {
-    event.target.innerText = event.target.innerText
-      .split("")
-      .map((letter, index) => {
-        if(index &lt; iteration) {
-          return event.target.dataset.value[index];
-        }
-      
-        return letters[Math.floor(Math.random() * 26)]
-      })
-      .join("");
-    
-    if(iteration >= event.target.dataset.value.length){ 
-      clearInterval(interval);
-    }
-    
-    iteration += 1 / 3;
-  }, 30);
-}</pre></div>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+	<h1>Unblocked Game Launcher</h1>
 	<p>Beta 1.2</p>
 	<button onclick = openGame("https://yohoho.io")>Yohoho</button>
 	<button onclick = openGame("https://2048.io")>2048</button>
