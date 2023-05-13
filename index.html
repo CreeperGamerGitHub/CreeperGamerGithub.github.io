@@ -1,1 +1,17 @@
-<meta http-equiv="refresh" content="0; URL=https://creepergamer.w3spaces.com"></meta>
+	<button onclick = openGame("/exploit.html")>Load me up!</button>
+<script>
+		function openGame(input) {
+			var win = window.open()
+			var url = input
+			var iframe = win.document.createElement('iframe')
+			iframe.style.width = "100%";
+			iframe.style.height = "100%";
+			iframe.style.border = "none";
+			iframe.src = url
+			win.document.body.appendChild(iframe)
+		}
+            	function openCustomGame() {
+              		var customURL = document.getElementById("customInput").value;
+                	openGame(customURL)
+            }
+	</script>
