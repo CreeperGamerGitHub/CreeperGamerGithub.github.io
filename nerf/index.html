@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Scoreboard</title>
+	<style>
+		/* Style the header */
+		h1 {
+			text-align: center;
+			margin-top: 30px;
+			margin-bottom: 30px;
+			font-size: 36px;
+			color: #333;
+		}
+
+		/* Style the table */
+		table {
+			margin: 0 auto;
+			border-collapse: collapse;
+			width: 80%;
+			max-width: 800px;
+			background-color: #fff;
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+			border-radius: 10px;
+			overflow: hidden;
+			margin-bottom: 30px;
+		}
+
+		th, td {
+			padding: 15px;
+			text-align: center;
+			border-bottom: 1px solid #ddd;
+		}
+
+		/* Style the table header */
+		th {
+			background-color: #f2f2f2;
+			color: #333;
+			text-transform: uppercase;
+			font-size: 14px;
+			letter-spacing: 1px;
+		}
+
+		/* Style the input field for player score */
+		input[type="number"] {
+			width: 60px;
+			text-align: center;
+			border: none;
+			background-color: #f2f2f2;
+			font-size: 16px;
+			font-weight: bold;
+		}
+
+		/* Style the buttons for incrementing and decrementing the player score */
+		button {
+			background-color: #4CAF50;
+			color: #fff;
+			border: none;
+			padding: 10px 20px;
+			font-size: 16px;
+			cursor: pointer;
+			border-radius: 5px;
+		}
+
+		button:hover {
+			background-color: #3e8e41;
+		}
+
+		/* Style the reset button */
+		.reset-button {
+			display: block;
+			margin: 0 auto;
+			background-color: #f44336;
+			color: #fff;
+			border: none;
+			padding: 10px 20px;
+			font-size: 16px;
+			cursor: pointer;
+			border-radius: 5px;
+			margin-bottom: 30px;
+		}
+
+		.reset-button:hover {
+			background-color: #d32f2f;
+		}
+	</style>
+</head>
+<body>
+	<h1>Scoreboard</h1>
+	<table>
+		<thead>
+			<tr>
+				<th>Player</th>
+				<th>Lives</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>You</td>
+				<td><input type="number" id="player1Score" value="20" readonly></td>
+				<td>
+					<button onclick="incrementScore('player1Score')">-1</button>
+					<button onclick="decrementScore('player1Score')">-2</button>
+				</td>
+			</tr>
+			<tr>
+            </tbody>
+        </table>
+    
+        <button class="reset-button" onclick="resetScores()">Reset Score</button>
+    
+        <script>
+            function incrementScore(playerScoreId) {
+                const playerScoreInput = document.getElementById(playerScoreId);
+                playerScoreInput.value = parseInt(playerScoreInput.value) - 1;
+            }
+    
+            function decrementScore(playerScoreId) {
+                const playerScoreInput = document.getElementById(playerScoreId);
+                playerScoreInput.value = parseInt(playerScoreInput.value) - 2;
+            }
+            function startGame(playerScoreId) {
+                const playerScoreInput = document.getElementById(playerScoreId);
+                playerScoreInput.value = parseInt(playerScoreInput.value) + 20;
+            }
+    
+            function resetScores() {
+                document.getElementById("player1Score").value = 20;
+            }
+        </script>
+    </body>
+    </html>
