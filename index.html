@@ -1,9 +1,55 @@
+<h1 data-value="I'm ThatOneCoder.">I'm ThatOneCoder.</h1>
 <style>body {
-  background-color: #36393e;
-} 
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}</style><img src="96c.gif" alt="duc" class="center">
+  display: grid;
+  place-items: top-left;
+  height: 50px;
+  width: 275px;
+  background-color: black;
+  margin: 0px;
+  overflow: hidden;
+}
+
+h1 {
+  font-family: 'Space Mono', monospace;
+  font-size: 25px;
+  color: white;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+h1:hover {
+  background-color: white;
+  color: black;
+}
+img {
+place-items: center;
+  width: 250%;</style>
+<script>const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890<>/,.;:{}[]\|!@#$%^&*()_+=-";
+
+let interval = null;
+
+document.querySelector("h1").onmouseover = event => {  
+  let iteration = 0;
+  
+  clearInterval(interval);
+  
+  interval = setInterval(() => {
+    event.target.innerText = event.target.innerText
+      .split("")
+      .map((letter, index) => {
+        if(index < iteration) {
+          return event.target.dataset.value[index];
+        }
+      
+        return letters[Math.floor(Math.random() * 53)]
+      })
+      .join("");
+    
+    if(iteration >= event.target.dataset.value.length){ 
+      clearInterval(interval);
+    }
+    
+    iteration += 1 / 3;
+  }, 30);
+}</script>
+<img src="96c.gif" alt="duc">
